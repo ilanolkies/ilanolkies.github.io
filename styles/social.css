@@ -9,18 +9,18 @@
 		filter: brightness(80%);
 	}
 
-.social-github {
+.social-github, .social-github:hover {
 	color: #24292e;
 }
 
-.social-twitter {
+.social-twitter, .social-twitter:hover {
 	color: rgb(29, 161, 242);
 }
 
-.social-linkedin {
+.social-linkedin, .social-linkedin:hover {
 	color: #0077B5;
 }
 
-.social-stackoverflow {
+.social-stackoverflow, .social-stackoverflow:hover {
 	color: #F48024;
 }
