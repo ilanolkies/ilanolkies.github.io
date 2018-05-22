@@ -23,5 +23,8 @@ A comment plug-in.
 - [Google Analytics](https://www.google.com/analytics/#?modal_active=none)
 Offers marketing analytics products for businesses of all sizes to better understand your customers.
 
+- [Font awesome](https://fontawesome.com)
+Vector icons and social logos.
+
 ## Thanks to
 @barryclark and his [Jekyll now guide](https://github.com/barryclark/jekyll-now).

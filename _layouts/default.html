@@ -10,6 +10,7 @@
   <![endif]-->
 
   {% include bootstrap_styles.html %}
+  {% include custom_styles.html %}
 </head>
 
 <body>
@@ -41,8 +42,17 @@
       </div>
     </div>
   </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">
+        {% include social.html %}
+      </span>
+    </div>
+  </footer>
 
   {% include analytics.html %}
+  {% include font_awesome.html %}
 
   {% include bootstrap_js.html %}
 </body>
