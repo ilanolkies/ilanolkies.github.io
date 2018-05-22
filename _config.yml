@@ -1,0 +1,26 @@
+name: Ilan Olkies
+
+description: Web Developer
+
+avatar: https://avatars1.githubusercontent.com/u/36084092?s=460&v=4
+
+url: https://ilanolkies.github.io
+
+baseurl: "https://ilanolkies.github.io"
+
+permalink: /:title/
+
+version: v1.2.0
+
+gems:
+  - jekyll-sitemap 
+  - jekyll-feed 
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+theme: jekyll-theme-minimal
