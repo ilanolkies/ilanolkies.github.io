@@ -1,0 +1,26 @@
+.social-link {
+	color: inherit;
+	transition: color 0.3s ease;
+	padding: 5px;
+	font-size: 20px;
+}
+
+	.social-link:hover {
+		filter: brightness(80%);
+	}
+
+.social-github {
+	color: #24292e;
+}
+
+.social-twitter {
+	color: rgb(29, 161, 242);
+}
+
+.social-linkedin {
+	color: #0077B5;
+}
+
+.social-stackoverflow {
+	color: #F48024;
+}
