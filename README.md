@@ -26,5 +26,8 @@ Offers marketing analytics products for businesses of all sizes to better unders
 - [Font awesome](https://fontawesome.com)
 Vector icons and social logos.
 
+- [Octicons](https://octicons.github.com)
+GitHub's icons.
+
 ## Thanks to
 @barryclark and his [Jekyll now guide](https://github.com/barryclark/jekyll-now).

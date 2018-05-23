@@ -15,6 +15,7 @@ version: v1.2.0
 gems:
   - jekyll-sitemap 
   - jekyll-feed 
+  - jekyll-octicons
 
 exclude:
   - Gemfile
