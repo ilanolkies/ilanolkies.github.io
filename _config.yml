@@ -10,6 +10,8 @@ baseurl: "https://ilanolkies.github.io"
 
 permalink: /:title/
 
+highlighter: rouge
+
 version: v1.2.0
 
 gems:
