@@ -10,7 +10,12 @@ baseurl: "https://ilanolkies.github.io"
 
 permalink: /:title/
 
+markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false  
+  syntax_highlighter: rouge
 
 version: v1.2.0
 
