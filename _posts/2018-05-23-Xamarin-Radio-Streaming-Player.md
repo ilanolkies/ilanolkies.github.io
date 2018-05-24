@@ -44,6 +44,7 @@ Images must be added to both projects:
 - In Android: drop them in _Resources/drawable_ folder.
 
 Then, we are going to add 3 `Image` tags in the main page, usually named like the project.
+
 ```xml
 <Image Grid.Row="0" Grid.Column="1"
        Source="play.png"
@@ -55,6 +56,7 @@ Then, we are going to add 3 `Image` tags in the main page, usually named like th
 In the example I use two Grids to encapsulate the images. As I recently said, it's easier for me to size things with `Grid`.
 
 Now we are going to add `TapGestureRecognizer` to our images. This, as it names says, provides tap gesture recognition and events.
+
 ```xml
 <Image ...>
     <Image.GestureRecognizers>
@@ -66,13 +68,16 @@ Now we are going to add `TapGestureRecognizer` to our images. This, as it names 
 Finally, we must implement these callbacks addded to each image. For a while, we are just going to change `IsVisible` properties of the images. 
 
 To do this we must set `x:Name` to the elements we want to show or hide:
+
 ```xml
 <Grid x:Name="Play">
     <!-- Column and row definitions -->
     <!-- And some content -->
 </Grid>
 ```
+
 And implement the callbacks:
+
 ```csharp
 private void Play_tapped(object sender, EventArgs e)
 {
@@ -83,6 +88,7 @@ private void Play_tapped(object sender, EventArgs e)
 
 #### Extra
 In the new iPhone X we have to keep some area safe. Our firend Xamarin provides us a method to do this. Let's add it in the _MainPage.xaml.cs_.
+
 ```csharp
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 //...
@@ -101,6 +107,7 @@ public StreamingExamplePage()
 All the view logic will be implemented in our `ViewModel`. To create it, add a new class to somewhere in the project. For big projects I use a folder named _ViewModels_, but for this example let's just drop it in the project main folder. I called it `StremingViewModel`.
 
 Now we are going to link our view to the new view model. 
+
 ```csharp
 private StreamingViewModel ViewModel { get { return (StreamingViewModel)this.BindingContext; } }
 
@@ -110,9 +117,11 @@ public StreamingExamplePage()
     BindingContext = new StreamingViewModel();
 }
 ```
+
 I always creat ViewModel property to avoid casting in each call.
 
 In the view model we are going to implement a _IsPlaying_ property and the three actions:
+
 ```csharp
 public class StreamingViewModel
 {
@@ -125,6 +134,7 @@ public class StreamingViewModel
     //Pause() and Stop()
 }
 ```
+
 But this is still useless... Jump to the next step!
 
 ### 5. Data Binding to change icons 
@@ -140,6 +150,7 @@ This step is devided in some mini steps:
 
 So let's go!
 1. First of all we must inherit the view modelfrom `INotifyPropertyChanged`. As name says, this interface is used to notify that a property value has changed. Using it can be devided in 2 steps:
+
 ```csharp
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -157,6 +168,7 @@ public class StreamingViewModel : INotifyPropertyChanged
 ```
 
 2. We are going to call `NotifyPropertyChanged()` from the property setter:
+
 ```csharp
 public bool DisplayPlay { get => !isPlaying; }
 public bool DisplayPauseStop { get => isPlaying; }
@@ -175,6 +187,7 @@ bool IsPlaying
 ```
 
 3. And now we must _connect_ all this to our view:
+
 ```xml
 <Grid IsVisible="{Binding DisplayPlay}" ...>
     <!-- Play button -->
@@ -188,6 +201,7 @@ bool IsPlaying
 
 #### Create interface
 Create an interface in the project. I'll drop it in the project folder and call it `IStreaming`.
+
 ```csharp
 public interface IStreaming
 {
@@ -198,6 +212,7 @@ public interface IStreaming
 ```
 
 We are going to use this interface as a Dependency Injection. This means we are going to implement it separately in each plataform: iOS and Android.
+
 ```csharp
 using Xamarin.Forms;
 // All your stuff...
@@ -207,6 +222,7 @@ using Xamarin.Forms;
     IsPlaying = true;
 }
 ```
+
 > Note: you can't run until you implement the injection.
  
 Now the most important and interesting part!
@@ -217,7 +233,8 @@ Just 3 steps:
 3. Allow background audio
 
 So here we go
-1. The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. Xamarin has an implementation of this framework! 
+1. The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. Xamarin has an implementation of this framework!
+
 ```csharp
 using System;
 using StreamingExample;
@@ -258,9 +275,11 @@ namespace StreamingExample.iOS
 	}
 }
 ```
+
 > Obviously, change your.domain.com for your domain.
 > 
 2. Now we must allow the URL, is just marking it as secure. In _Info.plist_ file in the iOS project add this key:
+
 ```xml
 <dict>
     <key>NSExceptionDomains</key>
@@ -277,6 +296,7 @@ namespace StreamingExample.iOS
 	</dict>
 </dict>
 ```
+
 ```
 [Dictionary] App Transport Security Settings 
     [Dictionary] Exception Domains 
@@ -287,20 +307,24 @@ namespace StreamingExample.iOS
 ```
 
 3. Finally, we want to listen to our radio while the app is in background. We are going to add this to _Info.oplist_.
+
 ```
 <array>
 	<string>audio</string>
 </array>
 ```
+
 ```
 [Array] Required background modes
     [String] App plays audio or streams audio/video using AirPlay
 ```
+
 > Now you can run iOS project. 
 
 #### Implementation in Android
 It is quite simmilar to iOS, but we are going to use native `Android.Media`.
 1. First we implement `IStreaming`
+
 ```chsarp
 using RadioZonica.Interfaces;
 using Android.Media;
@@ -352,6 +376,7 @@ namespace RadioZonica.Droid
 ```
 
 2. Now we must allow some stuff in `AndroidManifest`. Add:
+
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -370,5 +395,3 @@ namespace RadioZonica.Droid
 7. Add interface to manage streaming natively.
 8. Implement interface in each device.
 9. Call the interface implementations from view model as a Dependency Injection using `DependencyService.Get`.
-
-
