@@ -5,5 +5,3 @@ _site
 .DS_Store
 yarn.lock
 Gemfile.lock
-tag
-category
