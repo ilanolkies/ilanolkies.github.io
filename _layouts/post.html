@@ -2,18 +2,47 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="entry">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }} </h1>
+
+    {% for tag in page.tags %}
+      <a href="" class="badge badge-light">{{ tag }}</a>
+    {% endfor %}
+
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%d %-b %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+        </span>
+        • <span>Category: {{ page.category | escape }}</span>
+    </p>
+
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+    <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Filanolkies.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div> 
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-  
-  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" size="large" class="twitter-share-button" data-text="I’m reading '{{ page.title }}' in @ilanolkies's blog." data-url="{{ site.url }}{{ page.url }}" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
 
-  {% include disqus.html %}
+  {%- include disqus.html -%}
+
 </article>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>

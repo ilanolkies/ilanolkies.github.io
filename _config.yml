@@ -1,28 +1,25 @@
-name: Ilan Olkies
+title: Ilan Olkies
 
-description: Web Developer
+description: Blog about mobile developing and more stuff.
 
-avatar: https://avatars1.githubusercontent.com/u/36084092?s=460&v=4
+baseurl: ""
+url: "https://ilanolkies.github.io"
 
-url: https://ilanolkies.github.io
-
-baseurl: "https://ilanolkies.github.io"
-
-permalink: /:title/
+twitter_username: ilanolkies
+github_username:  ilanolkies
+instagram_username: ilanolkies
+linkedin_username: ilanolkies
 
 markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  hard_wrap: false  
-  syntax_highlighter: rouge
 
-version: v1.2.0
-
-gems:
-  - jekyll-sitemap 
-  - jekyll-feed 
+plugins:
+  - jekyll-feed
   - jekyll-octicons
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
 
 exclude:
   - Gemfile
@@ -30,3 +27,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - /node-modules
+  - package.json
+  - tag_gen.py
+  - yarn.lock

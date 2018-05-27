@@ -1,33 +1,21 @@
 # [ilanolkies.github.io](https://ilanolkies.github.io)
 My personal webpage.
 
-## I'm using
-- [GitHub Pages](https://pages.github.com)
-Websites hosted directly from GitHub repositories. 
+## Setup
+1. Install yarn packages.
 
-- [jQuery](https://jquery.com)
-A cross-platform JavaScript library designed to simplify the client-side scripting of HTML.
+```bash
+yarn install
+```
 
-- [Popper.js](https://popper.js.org)
-A library used to manage poppers in web apps.
+2. Generate category and tag pages.
 
-- [Bootrasp](https://getbootstrap.com)
-An open source toolkit for developing responsive web apps with HTML, CSS, and JS. 
+```bash
+python tag_gen.py
+python category_gen.py
+```
 
-- [Jekyll](https://jekyllrb.com)
-Transforms plain text text into static websites and blogs.
-
-- [Disqus](https://disqus.com)
-A comment plug-in.
-
-- [Google Analytics](https://www.google.com/analytics/#?modal_active=none)
-Offers marketing analytics products for businesses of all sizes to better understand your customers.
-
-- [Font awesome](https://fontawesome.com)
-Vector icons and social logos.
-
-- [Octicons](https://octicons.github.com)
-GitHub's icons.
-
-## Thanks to
-@barryclark and his [Jekyll now guide](https://github.com/barryclark/jekyll-now).
+3. Serve in :4000
+```bash
+jekyll serve
+```

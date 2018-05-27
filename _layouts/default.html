@@ -1,65 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include meta.html %}
+  {% include head.html %}
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <body>
 
-  {% include bootstrap_styles.html %}
-  {% include custom_styles.html %}
-</head>
+    {% include header.html %}
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <span class="navbar-brand" href="#">Ilan Olkies</span>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <main class="page-content" aria-label="Content">
+      <div class="container">
+        <div class="row">
+          <div class="col-9">
 
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/workflow">Workflow</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/glossary">Glossary</a>
-          </li>
-        </ul>
+            {{ content }}
+
+            <br>
+            <hr>
+          </div>
+          <div class="col-3">
+
+            {% include categories.html %}
+            {% include tags.html %}
+
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
+    </main>
 
-  <main role="main" class="container">
-    <h1>Ilan Olkies</h1>
-    <div class="row">
-      <div class="col">
-        {{ content }}
-      </div>
-    </div>
-  </main>
-  
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">
-        {% include social.html %}
-      </span>
-    </div>
-  </footer>
+    {%- include footer.html -%}
+    
+    {% include font_awesome.html %}
 
-  {% include analytics.html %}
-  {% include font_awesome.html %}
+    <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+  </body>
 
-  {% include bootstrap_js.html %}
-</body>
 </html>

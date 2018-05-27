@@ -1,0 +1,9 @@
+<h5>Categories</h5>
+<ul class="nav flex-column">
+  {% for category in site.categories %}
+    {% assign cat = category[0] %}
+    <li class="nav-item">
+      <a class="nav-link active" href="/category/{{ cat }}">{{ cat }}</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,31 @@
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+  {% assign ttags = post.tags | join:'|' | append:'|' %}
+  {% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign site.tags = "" %}
+{% for tag in rawtags %}
+  {% if tag != "" %}
+    {% if tags == "" %}
+      {% assign tags = tag | split:'|' %}
+    {% endif %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+<h5>Tags</h5>
+{% capture temptags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+  <a href="/tag/{{ tagname }}" class="badge badge-light">{{ tagname }}</a>
+{% endfor %}

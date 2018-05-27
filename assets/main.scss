@@ -1,3 +1,15 @@
+---
+---
+
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "minima";
+
+.align-middle{
+	vertical-align: middle;
+}
+
 .social-link {
 	color: inherit;
 	transition: color 0.3s ease;
@@ -24,3 +36,5 @@
 .social-stackoverflow, .social-stackoverflow:hover {
 	color: #F48024;
 }
+
+.twitter-share-button[style] { vertical-align: text-bottom !important; }

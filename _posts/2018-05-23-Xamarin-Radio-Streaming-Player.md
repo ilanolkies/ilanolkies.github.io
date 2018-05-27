@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Xamarin Radio Streaming Player
+author: Ilan Olkies
+category: Xamarin
+tags: xamarin mobile ios android
+permalink: /post/:title
 ---
 
 In this Xamarin tutorial we are going to create a simple radio streaming player app for iOS and Android. The radio will have 3 simple actions: Play, Stop and Pause.
@@ -17,20 +21,24 @@ In this Xamarin tutorial we are going to create a simple radio streaming player 
 ## Ingredients
 - Visual Studio updated.
 - The streaming links we want to reproduce. To test the links before using them, open them in the respective devices browsers, they must be two different links.
-
 - Some images for play, pause and stop buttons. It's quite borring to use those blue labels...
 
 > Check the <a href="{{ site.baseurl }}/workflow">general workflow</a> of my posts.
  
 > **Important: debug after each step!**. It's the most simple and best practice.
+
 ## Coding!
+
 <a href="https://github.com/ilanolkies/XamarinRadioStreamingExample" class="badge badge-light">{% octicon repo class:"align-middle" %} XamarinStreamingExample</a>
 
-### 1. Create `Xamarin.Forms` project 
+### 1. Create `Xamarin.Forms` project
+
 <a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/ef9d4084a5f6d067433a81d231404605d4ec6d59" class="badge badge-light">{% octicon git-commit class:"align-middle" %} ef9d408</a>
+
 Create a **Xamarin.Forms** blank app with Android and iOS projects.
 
-### 2. Dsign the `MainPage` 
+### 2. Dsign the `MainPage`
+
 <a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/3fd6485c4b31e01b760c028d91a06ac4756639a5" class="badge badge-light">{% octicon git-commit class:"align-middle" %} 3fd6485c</a>
 
 For the design of the `MainPage` we are going to use some images for play, pause and stop button. I downloaded them from [FlatIcon music pack](https://www.flaticon.com/packs/music).
@@ -87,6 +95,7 @@ private void Play_tapped(object sender, EventArgs e)
 ```
 
 #### Extra
+
 In the new iPhone X we have to keep some area safe. Our firend Xamarin provides us a method to do this. Let's add it in the _MainPage.xaml.cs_.
 
 ```csharp
@@ -100,6 +109,7 @@ public StreamingExamplePage()
 ```
 
 ### 4. Create a `ViewModel` 
+
 <a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/9ab05bc08270fe00a85eca418c8408f714277d06" class="badge badge-light">{% octicon git-commit class:"align-middle" %} 9ab05bc</a>
 
 > <a href="{{ site.baseurl }}/glossary#viewmodel">Glossary</a> for `ViewModel` definition.
@@ -137,8 +147,10 @@ public class StreamingViewModel
 
 But this is still useless... Jump to the next step!
 
-### 5. Data Binding to change icons 
+### 5. Data Binding to change icons
+
 <a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/7c53084ed3a20fd14b1397c6a279fcc057154c84" class="badge badge-light">{% octicon git-commit class:"align-middle" %} 7c53084</a>
+
 > <a href="{{ site.baseurl }}/glossary#data-binding">Glossary</a> for **Data Binding** definition.
 
 We are going to use **Data Binding** with the `IsPLaying` property. 
@@ -194,7 +206,8 @@ bool IsPlaying
 </Grid>
 ```
 
-### 6. Dependency injection` for streaming
+### 6. Dependency injection for streaming
+
 <a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/f304be0708af39936c8a2e103d7b98b473db29da" class="badge badge-light">{% octicon git-commit class:"align-middle" %} f304be0</a>
 
 > <a href="{{ site.baseurl }}/glossary#dependency-injection">Glossary</a> for **Dependency Injection** definition.
@@ -226,7 +239,9 @@ using Xamarin.Forms;
 > Note: you can't run until you implement the injection.
  
 Now the most important and interesting part!
+
 #### Implementation in iOS
+
 Just 3 steps:
 1. Implement `IStreaming` using native `AVFoundation`
 2. Allow streaming domain in `Info.plist`.
@@ -322,6 +337,7 @@ namespace StreamingExample.iOS
 > Now you can run iOS project. 
 
 #### Implementation in Android
+
 It is quite simmilar to iOS, but we are going to use native `Android.Media`.
 1. First we implement `IStreaming`
 
@@ -386,6 +402,7 @@ namespace RadioZonica.Droid
 **We have a radio player in Android and iOS!**
 
 ## Summary
+
 1. Creat a blank Xamarin.Forms.
 2. Add some images to the UI for play, pause and stop actions.
 3. Implement `TapGestureRecognizer` to hide and show the images when tapped.

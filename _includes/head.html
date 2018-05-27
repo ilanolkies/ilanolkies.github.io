@@ -1,0 +1,52 @@
+{% capture title %}{{ page.title }} | Ilan Olkies{% endcapture %}
+{% capture image %}{{ site.url }}/thumbnail.jpeg{% endcapture %}
+
+<head>
+	<title>{{ title }}</title>
+
+	<meta charset="utf-8" />
+	<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="author" content="Ilan Olkies" />
+	{% if post.excerpt %}
+	<meta name="description" content="{{ post.excerpt | strip_html }}" />
+	{% else %}
+	<meta name="description" content="{{ site.description | strip_html }}" />
+	{% endif %}
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:url"                content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="{{ title }}" />
+	{% if page.excerpt %}
+	<meta property="og:description"        content="{{ page.excerpt | strip_html  }}" />
+	{% else %}
+	<meta property="og:description"        content="{{ site.description | strip_html  }}" />
+	{% endif %}
+	<meta property="og:image"              content="{{ image }}" />
+
+	<!-- Twitter card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@ilanolkies" />
+	<meta name="twitter:creator" content="@ilanolkies" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:title" content="{{ title }}" />
+	{% if page.excerpt %}
+	<meta property="og:description" content="{{ page.excerpt | strip_html  }}" />
+	{% else %}
+	<meta property="og:description" content="{{ site.description | strip_html  }}" />
+	{% endif %}
+	<meta property="og:image" content="{{ image }}" />
+
+	{% if jekyll.environment == 'production' %}
+		{% include analytics.html %}
+	{% endif %}
+
+	<link rel="stylesheet" type="text/css" href="/assets/main.css">
+
+	<!--[if lt IE 9]>
+ 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+</head>

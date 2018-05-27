@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Workflow
-permalink: /workflow/
+permalink: /workflow
 ---
 
 This page describes common workflow to follow tutorials and posts.

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Glossary
-permalink: /glossary/
+permalink: /glossary
 ---
 
 Sometimes, it's a little bit overwhelming to explain each concept.

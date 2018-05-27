@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1>{{ page.category }}</h1>
+
+{% for post in site.categories[page.category] %}
+  <div class="card">
+    <div class="card-body">
+		{%- assign date_format = site.minima.date_format | default: "%d %-b %Y" -%}
+		<h3 class="card-title">{{ post.title | escape }}</h3>
+		<span class="card-subtitle mb-2 text-muted">{{ post.date | date: date_format }}</span>
+		<p class="card-text">{{ post.excerpt }}</p>
+		<a href="{{ post.url | relative_url }}" class="card-link">Read more</a>
+    </div>
+  </div>
+{% endfor %}
