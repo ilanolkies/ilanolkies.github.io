@@ -40,8 +40,8 @@
 	{% endif %}
 	<meta property="og:image" content="{{ image }}" />
 
-	<!-- RSS -->
-	{% feed_meta %}
+  	<!-- RSS -->
+  	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
 	{% if jekyll.environment == 'production' %}
 		{% include analytics.html %}
