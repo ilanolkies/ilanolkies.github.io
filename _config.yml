@@ -14,7 +14,6 @@ linkedin_username: ilanolkies
 markdown: kramdown
 
 plugins:
-  - jekyll-feed
   - jekyll-octicons
 
 sass:
