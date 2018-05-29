@@ -13,8 +13,8 @@ layout: null
 	<author>
    		<name>{{ site.author.name }}</name>
  	</author>
- 	<icon>/logo.svg</icon>
- 	<logo>/logo.png</logo>
+ 	<icon>{{ site.url }}/favicon.ico</icon>
+ 	<logo>{{ site.url }}/logo.png</logo>
 
  	{% for post in site.posts %}
 		<entry>
