@@ -30,7 +30,7 @@ In this Xamarin tutorial we are going to create a simple radio streaming player 
 
 ## Coding!
 
-<a href="https://github.com/ilanolkies/XamarinRadioStreamingExample" class="badge badge-light">{% octicon repo class:"align-middle" %} XamarinStreamingExample</a>
+{% include repo.html repo="https://github.com/ilanolkies/XamarinRadioStreamingExample" %}
 
 ### 1. Create `Xamarin.Forms` project
 
