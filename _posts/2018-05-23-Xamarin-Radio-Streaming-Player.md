@@ -109,7 +109,7 @@ public StreamingExamplePage()
 }
 ```
 
-### 4. Create a `ViewModel` 
+### 3. Create a `ViewModel` 
 
 {% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/9ab05bc08270fe00a85eca418c8408f714277d06" %}
 
@@ -148,7 +148,7 @@ public class StreamingViewModel
 
 But this is still useless... Jump to the next step!
 
-### 5. Data Binding to change icons
+### 4. Data Binding to change icons
 
 {% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/7c53084ed3a20fd14b1397c6a279fcc057154c84" %}
 
@@ -207,7 +207,7 @@ bool IsPlaying
 </Grid>
 ```
 
-### 6. Dependency injection for streaming
+### 5. Dependency injection for streaming
 
 {% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/f304be0708af39936c8a2e103d7b98b473db29da" %}
 
