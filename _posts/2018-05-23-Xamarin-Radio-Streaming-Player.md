@@ -34,13 +34,13 @@ In this Xamarin tutorial we are going to create a simple radio streaming player 
 
 ### 1. Create `Xamarin.Forms` project
 
-<a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/ef9d4084a5f6d067433a81d231404605d4ec6d59" class="badge badge-light">{% octicon git-commit class:"align-middle" %} ef9d408</a>
+{% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/ef9d4084a5f6d067433a81d231404605d4ec6d59" %}
 
 Create a **Xamarin.Forms** blank app with Android and iOS projects.
 
 ### 2. Dsign the `MainPage`
 
-<a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/3fd6485c4b31e01b760c028d91a06ac4756639a5" class="badge badge-light">{% octicon git-commit class:"align-middle" %} 3fd6485c</a>
+{% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/3fd6485c4b31e01b760c028d91a06ac4756639a5" %}
 
 For the design of the `MainPage` we are going to use some images for play, pause and stop button. I downloaded them from [FlatIcon music pack](https://www.flaticon.com/packs/music).
 
@@ -111,7 +111,7 @@ public StreamingExamplePage()
 
 ### 4. Create a `ViewModel` 
 
-<a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/9ab05bc08270fe00a85eca418c8408f714277d06" class="badge badge-light">{% octicon git-commit class:"align-middle" %} 9ab05bc</a>
+{% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/9ab05bc08270fe00a85eca418c8408f714277d06" %}
 
 > <a href="{{ site.baseurl }}/glossary#viewmodel">Glossary</a> for `ViewModel` definition.
 
@@ -150,7 +150,7 @@ But this is still useless... Jump to the next step!
 
 ### 5. Data Binding to change icons
 
-<a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/7c53084ed3a20fd14b1397c6a279fcc057154c84" class="badge badge-light">{% octicon git-commit class:"align-middle" %} 7c53084</a>
+{% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/7c53084ed3a20fd14b1397c6a279fcc057154c84" %}
 
 > <a href="{{ site.baseurl }}/glossary#data-binding">Glossary</a> for **Data Binding** definition.
 
@@ -209,7 +209,7 @@ bool IsPlaying
 
 ### 6. Dependency injection for streaming
 
-<a href="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/f304be0708af39936c8a2e103d7b98b473db29da" class="badge badge-light">{% octicon git-commit class:"align-middle" %} f304be0</a>
+{% include commit.html commit="https://github.com/ilanolkies/XamarinRadioStreamingExample/commit/f304be0708af39936c8a2e103d7b98b473db29da" %}
 
 > <a href="{{ site.baseurl }}/glossary#dependency-injection">Glossary</a> for **Dependency Injection** definition.
 
