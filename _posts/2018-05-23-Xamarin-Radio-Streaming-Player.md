@@ -5,7 +5,7 @@ author: Ilan Olkies
 category: Xamarin
 tags: xamarin mobile ios android
 permalink: /post/:title
-image: img/streaming/front.png
+image: /img/xamarin_streaming/front.png
 ---
 
 In this Xamarin tutorial we are going to create a simple radio streaming player app for iOS and Android. The radio will have 3 simple actions: Play, Stop and Pause.
