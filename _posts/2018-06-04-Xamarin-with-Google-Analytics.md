@@ -5,7 +5,7 @@ author: Ilan Olkies
 category: Xamarin
 tags: xamarin mobile ios android googleanalytics firebase google analytics
 permalink: /post/:title
-image: img/xamarin_analytics/front.jpg
+image: /img/xamarin_analytics/front.jpg
 ---
 
 Our goal is to get closer to users and provide them the best application. We need to know what pages they prefer to enter, which ads they mostly click on, at what time and where they open our app, how they move within the app features... the more data we can compile, the better is the product we can offer. Google Analytics is a free web and mobile analytics tool offered by Google to help us analyze our traffic. In this Xamarin.Forms tutorial we are going to connect our app to Google Analytics service.
