@@ -1,4 +1,4 @@
-# [ilanolkies.github.io](https://ilanolkies.github.io)
+# [ilanolkies.com](https://ilanolkies.com)
 My personal webpage.
 
 ## Setup
