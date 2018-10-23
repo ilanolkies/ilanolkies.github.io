@@ -6,9 +6,9 @@ permalink: /contributions
 
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">RSKIP-0060</h5>
+    <h5 class="card-title">RSKIP-0060 <small>RSK Improvement Proposal</small></h5>
     <p class="card-text">
-        Addresses can be validated using an injective function that makes capital letters redundant. RSKIP-0060 describes an address checksum mechanism that can be implemented in any network based on <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md" target="_blank">EIP-55</a>.<br>
+        Cryptocurrency addresses can be validated using an injective function that makes capital letters redundant. RSKIP-0060 describes an address checksum mechanism that can be implemented in any network based on <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md" target="_blank">EIP-55</a>.<br>
         This little RSKIP derived on some nice implementations on different repos and languages:
         <ul>
             <li>On <a href="https://github.com/trezor/trezor-crypto/blob/4153e662b60a0d83c1be15150f18483a37e9092c/address.c#L62" traget="_blank">trezor-crypto</a>: Heavily optimized cryptography algorithms for embedded devices.</li>
