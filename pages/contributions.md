@@ -4,7 +4,7 @@ title: Contributions
 permalink: /contributions
 ---
 
-<div class="card" style="width: 18rem;">
+<div class="card">
   <div class="card-body">
     <h5 class="card-title">RSKIP-0060</h5>
     <p class="card-text">
