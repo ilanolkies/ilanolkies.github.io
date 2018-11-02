@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: draft
 title: JS Beginners - Clase 1
 author: Ilan Olkies
 category: javascript
