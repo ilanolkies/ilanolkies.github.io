@@ -1,14 +1,14 @@
 ---
-layout: draft
-title: JS Beginners - Clase 1
+layout: post
+title: JS Beginners - Class 1
 author: Ilan Olkies
 category: javascript
 tags: js javascript js-beginners class
 permalink: /post/:title
-image: /img/js_beginners_clase_1/variable-2.png
+image: /img/js_beginners_class_1/portrait.png
 ---
 
-## Introducción
+## Introduction
 
 This is the begining of a little programming cours for beginners. I will publish some classes explaining the basis of programming and an introduction to JavaScript programming language, used in many contexts like web browsers to build interactive web pages.
 
