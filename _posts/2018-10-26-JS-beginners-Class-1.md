@@ -8,8 +8,6 @@ permalink: /post/:title
 image: /img/js_beginners_class_1/portrait.png
 ---
 
-## Introduction
-
 This is the begining of a little programming course for beginners. I will publish some classes explaining the basis of programming and an introduction to JavaScript programming language, used in many contexts like web browsers to build interactive web pages.
 
 ## Al little bit of computer architecture
