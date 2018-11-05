@@ -170,7 +170,7 @@ Functions is the other main element for programming.
 Every variable that we create inside curly brackets live inside this brackets. Pay atention to this, is very important: any varible we create iniside a function is not accessible from outside the function! Have a look at this example:
 
 ```js
-function (a) {
+function cuadraric (a) {
     var result = 8 * a**2 + 4 * a + 2;
     return result;
 }
