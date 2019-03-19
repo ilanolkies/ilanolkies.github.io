@@ -33,23 +33,19 @@
 	{% else %}
 	<meta property="og:description"        content="{{ site.description | strip_html  }}" />
 	{% endif %}
+	{% if page.image %}
+	<meta property="og:image"              content="{{ page.image }}" />
+	{% else %}
 	<meta property="og:image"              content="{{ image }}" />
+	{% endif %}
 
 	<!-- Twitter card -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@ilanolkies" />
 	<meta name="twitter:creator" content="@ilanolkies" />
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-	<meta property="og:title" content="{{ title }}" />
-	{% if page.excerpt %}
-	<meta property="og:description" content="{{ page.excerpt | strip_html  }}" />
-	{% else %}
-	<meta property="og:description" content="{{ site.description | strip_html  }}" />
-	{% endif %}
-	<meta property="og:image" content="{{ image }}" />
 
-  	<!-- RSS -->
-  	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
 	{% if jekyll.environment == 'production' %}
 		{% include analytics.html %}
@@ -59,5 +55,5 @@
 
 	<!--[if lt IE 9]>
  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  	<![endif]-->
+  <![endif]-->
 </head>
