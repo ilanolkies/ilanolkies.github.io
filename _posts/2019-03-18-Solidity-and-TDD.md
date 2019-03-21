@@ -279,7 +279,7 @@ function donate (uint index) public payable {
 
 {% include commit.html commit="https://github.com/ilanolkies/donate-direct/commit/0aa77a6e8fb7b396bacbcc81d3686de20ec8ef38" %}
 
-Let's another test to ensure many projects can be added. I won't write the test her because it's a little bit long. Check it in the commit {% include commit.html commit="https://github.com/ilanolkies/donate-direct/commit/0c10ccd97164b235243d58b43913e7388fefabd7" %}.
+Let's create another test to ensure many projects can be added. I won't write the test her because it's a little bit long. Check it in the commit {% include commit.html commit="https://github.com/ilanolkies/donate-direct/commit/0c10ccd97164b235243d58b43913e7388fefabd7" %}.
 
 
 We have a complete and usefull plataform for direct donations. The only thing missing is the donors exposure.
