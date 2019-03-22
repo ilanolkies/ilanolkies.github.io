@@ -49,7 +49,7 @@ I will show how to do it with RSK MainNet, but this works for any network.
 
 - Why do I select 'Default (ETH)' to choose addresses.
 
-    MetaMask uses [BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) hierarchical deterministic wallet derivation for addresses. But for all networks it uses the same derivation path: `(m/44'/60'/0/0/i)`, Ethereum derivation path.
+    MetaMask uses [BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) hierarchical deterministic wallet derivation for addresses. But for all networks it uses the same derivation path: `(m/44'/60'/0'/0/i)`, Ethereum derivation path.
     No matter what network you choose, MetaMask will always use this derivation path. That's why we have to choose it in MyCrypto to find the right addresses.
 
 Hope it's usefull!
