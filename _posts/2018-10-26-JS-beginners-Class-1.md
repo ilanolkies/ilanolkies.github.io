@@ -193,12 +193,12 @@ function cuadraric (a) {
 
 ```js
 function price (apples, oranges, bananas, grapes) {
-    var applesPrice = apples * 8;
-    var orangesPrice = oranges * 10;
-    var bananasPrice = bananas * 5;
-    var grapesPrice = grape * 0.1;
+    var applesCost = apples * 8;
+    var orangesCost = oranges * 10;
+    var bananasCost = bananas * 5;
+    var grapesCost = grape * 0.1;
 
-    return applesPrice + orangesPrice + bananasPrice + grapesPrice;
+    return applesCost + orangesCost + bananasCost + grapesCost;
 }
 
 function twentyDiscount (price) {
@@ -206,13 +206,13 @@ function twentyDiscount (price) {
     return result;
 }
 
-var fruitPunchPrice = price(2, 3, 4, 0);
-var wine = price(0, 0, 0, 10);
-var juice = price(2, 4, 0, 0);
+var fruitPunchCost = price(2, 3, 4, 0);
+var wineCost = price(0, 0, 0, 10);
+var juiceCost = price(2, 4, 0, 0);
 
-var fruitPunchWithDiscount = twentyDiscount(fruitPunchPrice);
-var wineWithDiscount = twentyDiscount(winePrice);
-var juiceWithDiscount = twentyDiscount(juicePrice);
+var fruitPunchWithDiscount = twentyDiscount(fruitPunchCost);
+var wineWithDiscount = twentyDiscount(wineCost);
+var juiceWithDiscount = twentyDiscount(juiceCost);
 ```
 
 This program may be used in the grocery to caculate the price of a bag of fruit, and make a discount to frequent clients.
@@ -227,4 +227,4 @@ We learned how to create a simple program in JavaScript mixing three mainframes 
 
 ## Excercises
 
-I publish some excersises in [GitHub](https://github.com/ilanolkies/js-beginners). If you know nothing about git, you can go to the link and manually download it. Go to _1-variables-functions_ folder and read the README file that explains how to complete the excersise.
+I published some excersises in [GitHub](https://github.com/ilanolkies/js-beginners). If you know nothing about git, you can go to the link and manually download it. Go to _1-variables-functions_ folder and read the README file that explains how to complete the excersise.
