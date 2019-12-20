@@ -141,7 +141,16 @@ var a = 'Hi';
 var b = 'JavaScript';
 
 var c = a + ' '
-var c = c + b; // c = 'Hi JavaScript'
+c = c + b; // c = 'Hi JavaScript'
+```
+
+Or simpler...
+
+```js
+var a = 'Hi';
+var b = 'JavaScript';
+
+var c = a + ' ' + b; // c = 'Hi JavaScript'
 ```
 
 This program stores `'Hi JavaScript'` in `c` variable.
