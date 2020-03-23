@@ -500,7 +500,7 @@ RSK Testnet is a public blockchain of free use that works as the productive RSK 
     };
     ```
 
-    Create a `.secret` file with a 12 wrods mnemonic phrase. This is the private key that will sign deployment transactions. You can generate one [here](https://iancoleman.io/bip39/). Don't use this for productive environments.
+    Create a `.secret` file with a 12 word mnemonic phrase. This is the private key that will sign deployment transactions. You can generate one [here](https://iancoleman.io/bip39/). Don't use this for productive environments.
 
     ```
     hero option vessel shy reject project extra undo alien general cactus sausage
