@@ -427,9 +427,10 @@ To set a new value the user will need to sign a transaction and pay for the fees
     ```javascript
     render() {
       const { message, newMessage, setting, transactionHash, error } = this.state;
+
       return (
         <Container>
-          <></>
+          <>...</>
           {
             !window.ethereum ?
             <p>Please install <a href="https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en" targer="_blank" ref="">Nifty wallet</a> to set the message.</p> :
@@ -447,6 +448,7 @@ To set a new value the user will need to sign a transaction and pay for the fees
           }
         </Container>
       )
+    }
     ```
 
 {% include commit.html commit="https://github.com/ilanolkies/hello-world-rsk/commit/d95f73cb1f984377bdd2ba6a9a6aff4ea6310d9e" %}
