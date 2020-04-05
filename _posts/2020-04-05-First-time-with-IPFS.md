@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First time with IPFS
+title: First time with IPFS, the distributed file system
 author: Ilan Olkies
 category: javascript
 tags: js javascript ipfs rif distributed file-system fs rsksmart rif-storage
