@@ -39,4 +39,4 @@ for cat in total_cats:
     write_str = '---\nlayout: category\ntitle: \"Tag: ' + cat + '\"\ncategory: ' + cat + '\nrobots: noindex\n---\n'
     f.write(write_str)
     f.close()
-print("Tags generated, count", total_cats.__len__())
+print("Categories generated, count", total_cats.__len__())
