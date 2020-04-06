@@ -88,7 +88,7 @@ ipfs cat QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/quick-start
 
 ## Hands on code
 
-We are going to create a script that uplaods an image to IPFS, then downloads it and displays it in the default image viewer.
+We are going to create a script that uploads an image to IPFS, then downloads it and displays it in the default image viewer.
 
 ### Setup
 
@@ -116,7 +116,7 @@ We are going to create a script that uplaods an image to IPFS, then downloads it
 
 ## Create the app
 
-Let's try getting the file we uploaded with the command line tool, the 'hello ipfs':
+Let's try getting the file we uploaded with the command line tool, the 'hello ipfs'. Create a `index.js` file:
 
 ```javascript
 const RifStorage = require('@rsksmart/rif-storage')
