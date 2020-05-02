@@ -52,3 +52,19 @@
 .zoom-image:hover {
     transform: scale(3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+.center-image-container {
+	text-align: center;
+	margin: 20px;
+}
+
+.shadow-image {
+	border-radius: 0.2em;
+  -webkit-box-shadow: 1px 1px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 3px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.card-image-container {
+	text-align: center;
+}

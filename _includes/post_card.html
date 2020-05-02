@@ -5,7 +5,9 @@
 		<span class="card-subtitle mb-2 text-muted pull-right">{{ include.post.date | date: date_format }}</span>
 	</div>
 	<div class="card-body card-image" style="">
-		<img src="{{ site.url }}{{ include.post.image }}" class="img img-responsive" />
+		<div class="card-image-container">
+			<img src="{{ site.url }}{{ include.post.image }}" class="img img-responsive" />
+		</div>
 		<p class="card-text">{{ include.post.excerpt }}</p>
 	</div>
 	<div class="card-footer">
