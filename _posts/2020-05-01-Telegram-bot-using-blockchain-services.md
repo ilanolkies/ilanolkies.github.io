@@ -32,7 +32,7 @@ and an account. Then we can just create a new bot for free:
 
 <ol>
   <li>
-    <p>Open the app and search the @GodFather, he will help us to create the bot.</p>
+    <p>Open the app and search the @BotFather, he will help us to create the bot.</p>
     <div class="center-image-container">
       <img src="/img/telegram_bot_rns/1-create-bot.png" class="shadow-image" />
     </div>
