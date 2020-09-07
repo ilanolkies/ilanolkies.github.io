@@ -3,9 +3,51 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="mdc-typography">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title">Headline 6</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <a class="material-icons mdc-icon-button mdc-top-app-bar__action-item" aria-label="Share" alt="Share">share</a>
+          <a class="material-icons mdc-icon-button mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+          <a class="material-icons mdc-icon-button mdc-top-app-bar__action-item" aria-label="Search this page" alt="Search this page">search</a>
+        </section>
+      </div>
+    </header>
+    <!-- Apply Material headline3 style to this <h1> element -->
+    <h1 class="mdc-typography--headline3">Hello, Material Starter Kit!</h1>
+    <p>
+       A starter kit to get you up and running with Material Components for the Web. <a href="https://glitch.com/~material-starter-kit">Remix and start theming.</a>
+    </p>
+    <br>
+    <button class="mdc-button mdc-button--raised">
+      Hello World
+    </button>
 
-    {% include header.html %}
+    <!-- import the Material javascript file -->
+    <script type="text/javascript">
+      window.mdc.autoInit();
+    </script>
+  </body>
+
+  <!--
+  <body>
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title">Headline 6</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <a class="material-icons mdc-icon-button mdc-top-app-bar__action-item" aria-label="Share" alt="Share">share</a>
+          <a class="material-icons mdc-icon-button mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+          <a class="material-icons mdc-icon-button mdc-top-app-bar__action-item" aria-label="Search this page" alt="Search this page">search</a>
+        </section>
+      </div>
+    </header>
 
     <main class="page-content" aria-label="Content">
       <div class="container">
@@ -34,6 +76,7 @@
     <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
-  </body>
+
+  </body>-->
 
 </html>
