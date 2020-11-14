@@ -10,6 +10,8 @@ image: /img/electron-react-ts/front.png
 
 An Electron + React.js + Typescript app template. Find it at [`ilanolkies/electron-react-ts`](https://github.com/ilanolkies/electron-react-ts).
 
+Integrates webpack, ESlint, Jest, Enzyme and Sass. Runs lint, test and build in [Github actions](https://github.com/features/actions). Uses [Coveralls](https://coveralls.io/) coverage reports.
+
 ### Features
 
 ![](/img/electron-react-ts/front.png)
